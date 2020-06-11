@@ -1,0 +1,51 @@
+# This file allows specifying additional repositories to use
+# when building gluon.
+#
+# In most cases, it is not required so don't add it.
+
+##	GLUON_SITE_FEEDS
+#		for each feed name given, add the corresponding PACKAGES_* lines
+#		documented below
+#GLUON_SITE_FEEDS='my_own_packages'
+
+##	PACKAGES_$feedname_REPO
+#		the  git repository from where to clone the package feed
+#PACKAGES_MY_OWN_PACKAGES_REPO=https://github.com/.../my-own-packages.git
+
+
+##	PACKAGES_$feedname_COMMIT
+#		the version/commit of the git repository to clone
+#PACKAGES_MY_OWN_PACKAGES_COMMIT=123456789aabcda1a69b04278e4d38f2a3f57e49
+
+##  PACKAGES_$feedname_BRANCH
+#   the branch to check out
+#PACKAGES_MY_OWN_PACKAGES_BRANCH=my_branch
+
+GLUON_SITE_FEEDS='ssidchanger eulenfunk'
+
+## gluon-ssid-changer von Freifunk-Nord
+#PACKAGES_FFN_REPO=https://github.com/freifunk-radevormwald/gluon-ssid-changer.git
+#PACKAGES_FFN_COMMIT=3c6750ce8fc9cedabfa8a6f479fb12d343c6ecc2
+#PACKAGES_FFN_BRANCH=2018.1.x
+#
+# eulenfunk
+PACKAGES_EULENFUNK_REPO=https://github.com/steneu/eulenfunk-packages.git  # Testweise vom steneu git
+PACKAGES_EULENFUNK_COMMIT=fcab374c7bbf9354245c5b3e144905de313fcd8a
+PACKAGES_EULENFUNK_BRANCH=v2018.1.x
+
+## radevormwald
+#GLUON_SITE_FEEDS="ffrade"
+#PACKAGES_FFRADE_REPO=https://github.com/freifunk-radevormwald/ffrade-packages.git
+#PACKAGES_FFRADE_COMMIT=31acfbe8cf678bc6745226f4d29e4ab81f7c5a2b
+#PACKAGES_FFRADE_BRANCH=v2019.1.x
+
+## ffffm-additional-wifi-json-info von freifunk-ffm
+#PACKAGES_FFM_REPO=https://github.com/freifunk-radevormwald/ffm-packages.git
+#PACKAGES_FFM_COMMIT=1e1a3af97f401d21d7e08b80e196c86211dd6bc1
+#PACKAGES_FFM_BRANCH=master
+
+## freifunk aachen
+#GLUON_SITE_FEEDS="ssidchanger"
+PACKAGES_SSIDCHANGER_REPO=https://github.com/freifunk-radevormwald/gluon-ssid-changer.git
+PACKAGES_SSIDCHANGER_COMMIT=f962ab17723be144849ff988909e3a794d612d56
+PACKAGES_SSIDCHANGER_BRANCH=2019.1.x
