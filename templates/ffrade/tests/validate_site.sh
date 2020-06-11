@@ -6,7 +6,7 @@ GLUON_PACKAGES_BRANCH='master'
 
 P=$(pwd)/templates/dus
 echo "####### validating $P/site.conf ..."
-GLUON_SITEDIR="templates/ffrade/" lua5.1 templates/dus/tests/tests/site_config.lua
+GLUON_SITEDIR="templates/ffrade/" lua5.1 templates/ffrade/tests/tests/site_config.lua
 
 echo "####### validating $P/make-release.sh ..."
 bash -n $P/make-release.sh
