@@ -97,6 +97,7 @@ if [ "$sitename" == "dus" ] || \
    [ "$sitename" == "ffmrh" ] || \
    [ "$sitename" == "ffwip" ] || \
    [ "$sitename" == "ffbar" ] || \
+#	 [ "$sitename" == "ffrade" ] || \
    [ "$sitename" == "ffmz" ] || \
    [ "$sitename" == "ffmzkey" ] || \
    [ "$sitename" == "sisi" ] || \
@@ -172,7 +173,7 @@ build_images_for_site ()
   append_quoted_arg  ARGS  GLUON_PACKAGEDIR "$SANDBOX_DIR/gluon/output/packages"
   append_quoted_arg  ARGS  GLUON_SITE_VERSION $(date +%Y%m%d)
  # For the Gluon build system, BROKEN=1 means "use the experimental/unstable branch".
-  append_quoted_arg  ARGS  BROKEN "1"
+  #append_quoted_arg  ARGS  BROKEN "1"
 
  # verbose logs
 #  append_quoted_arg  ARGS  v "s"
@@ -279,25 +280,25 @@ build_all_images ()
   local -a TARGETS=("$@")
 
   if (( ${#TARGETS[@]} == 0 )); then
-    TARGETS+=( ramips-rt305x )  #fails if inital run is done with j=1
-    TARGETS+=( mvebu-cortexa9 ) #fails on 2019.1.1 if ramips-rt305x is not built in the same run
+    #TARGETS+=( ramips-rt305x )  #fails if inital run is done with j=1
+    #TARGETS+=( mvebu-cortexa9 ) #fails on 2019.1.1 if ramips-rt305x is not built in the same run
     TARGETS+=( ar71xx-generic )
     TARGETS+=( ar71xx-tiny )
-    TARGETS+=( ar71xx-nand )
-    TARGETS+=( brcm2708-bcm2708 )
-    TARGETS+=( brcm2708-bcm2709 )
+    #TARGETS+=( ar71xx-nand )
+    #TARGETS+=( brcm2708-bcm2708 )
+    #TARGETS+=( brcm2708-bcm2709 )
     TARGETS+=( mpc85xx-generic )
     TARGETS+=( ramips-mt7621 )
-    TARGETS+=( sunxi-cortexa7 )
+    #TARGETS+=( sunxi-cortexa7 )
     TARGETS+=( x86-generic )
     TARGETS+=( x86-geode )
     TARGETS+=( x86-64 )
     TARGETS+=( ipq40xx )
-    TARGETS+=( ramips-mt7620 )
-    TARGETS+=( ramips-mt76x8 )
-    TARGETS+=( ar71xx-mikrotik )
-    TARGETS+=( brcm2708-bcm2710 )
-    TARGETS+=( ipq806x )
+    #TARGETS+=( ramips-mt7620 )
+    #TARGETS+=( ramips-mt76x8 )
+    #TARGETS+=( ar71xx-mikrotik )
+    #TARGETS+=( brcm2708-bcm2710 )
+    #TARGETS+=( ipq806x )
   fi
 
   pushd "$GLUON_DIR" >/dev/null
